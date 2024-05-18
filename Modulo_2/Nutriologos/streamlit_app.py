@@ -4,20 +4,7 @@ import pandas as pd
 import joblib
 import numpy as np
 
-st.set_page_config(
-    page_title="Prediccion de Enfermedades Crónicas",
-    page_icon=":smile:",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    theme={
-        "base": "dark",
-        "primaryColor": "#E694FF",
-        "backgroundColor": "#00172B",
-        "secondaryBackgroundColor": "#0083B8",
-        "textColor": "#DCDCDC",
-        "font": "sans serif",
-    },
-)
+st.set_page_config(page_title="Prediccion de Enfermedades Crónicas", page_icon=":smile:", layout="wide", initial_sidebar_state="auto")
 
 # Cargar los modelos entrenados
 model_diabetes = joblib.load('Modulo_2/Nutriologos/Modelos/diabetes_model.pkl')
@@ -67,7 +54,7 @@ def main():
         # Determinar el color a mostrar basado en el valor del IMC
     if imc is not None:
         if imc < 18.5:
-            color = 'yellow'
+            color = '#f8f800'
             nivel_peso = 'Bajo peso'
         elif imc < 25:
             color = 'green'
@@ -263,8 +250,8 @@ def main():
                 # Determinar el nivel de riesgo basado en el valor del ICC y el sexo
                 if sexo == 'Hombre':
                     if icc <= 0.78:
-                        color = 'yellow'
-                        nivel_riesgo = 'Sindrome Ginecoide: mayor riesgo de que el paciente sufra problemas en las piernas, como varices, hinchazón, problemas circulatorios y cansancio excesivo.\
+                        color = '#f8f800'
+                        nivel_riesgo = 'Sindrome Ginoide: mayor riesgo de que el paciente sufra problemas en las piernas, como varices, hinchazón, problemas circulatorios y cansancio excesivo.\
                         Los órganos que se ven más afectados son los riñones, el útero y la vejiga.'
                     elif icc >= 0.93:
                         color = 'red'
@@ -275,7 +262,7 @@ def main():
                         nivel_riesgo = 'Normal (Sin Riesgo)'
                 else:  # Mujer
                     if icc <= 0.75:
-                        color = 'yellow'
+                        color = '#f8f800'
                         nivel_riesgo = 'Sindrome Ginecoide: mayor riesgo de que el paciente sufra problemas en las piernas, como varices, hinchazón, problemas circulatorios y cansancio excesivo.\
                         Los órganos que se ven más afectados son los riñones, el útero y la vejiga.'
                     elif icc >= 0.84:
