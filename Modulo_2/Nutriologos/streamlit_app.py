@@ -4,6 +4,21 @@ import pandas as pd
 import joblib
 import numpy as np
 
+st.set_page_config(
+    page_title="Prediccion de Enfermedades Crónicas",
+    page_icon=":smile:",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    theme={
+        "base": "dark",
+        "primaryColor": "#E694FF",
+        "backgroundColor": "#00172B",
+        "secondaryBackgroundColor": "#0083B8",
+        "textColor": "#DCDCDC",
+        "font": "sans serif",
+    },
+)
+
 # Cargar los modelos entrenados
 model_diabetes = joblib.load('Modulo_2/Nutriologos/Modelos/diabetes_model.pkl')
 model_hipertension = joblib.load('Modulo_2/Nutriologos/Modelos/hipertension_model.pkl')
