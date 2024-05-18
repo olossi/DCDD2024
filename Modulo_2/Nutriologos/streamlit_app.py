@@ -149,6 +149,7 @@ def main():
 
     #Indicadores Sanguíneos
     st.sidebar.subheader('Indicadores Sanguíneos (Opcional)')
+    hdl = ldl = trigliceridos = ayunas = postprandial = 0
     if st.sidebar.checkbox('Tengo datos de indicadores sanguíneos'):
         st.markdown('### Niveles de Colesterol')
         hdl_str = st.text_input('HDL (mg/dL)', value='0.1')
