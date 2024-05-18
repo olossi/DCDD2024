@@ -5,10 +5,10 @@ import joblib
 import numpy as np
 
 # Cargar los modelos entrenados
-model_diabetes = joblib.load('/mount/src/dcdd2024/Modulo_2/Nutriologos/Modelos/diabetes_model.pkl')
-model_hipertension = joblib.load('/mount/src/dcdd2024/Modulo_2/Nutriologos/Modelos/Modelos/hipertension_model.pkl')
-model_cardio = joblib.load('/mount/src/dcdd2024/Modulo_2/Nutriologos/Modelos/ecv_model.pkl')
-model_multi = joblib.load('/mount/src/dcdd2024/Modulo_2/Nutriologos/Modelos/multi_label_model.pkl')
+model_diabetes = joblib.load('Modelos\diabetes_model.pkl')
+model_hipertension = joblib.load('Modelos\hipertension_model.pkl')
+model_cardio = joblib.load('Modelos\cardiovasculares_model.pkl')
+model_multi = joblib.load('Modelos\multi_label_model.pkl')
 
 # Definir la aplicación Streamlit
 def main():
