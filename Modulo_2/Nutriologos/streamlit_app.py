@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 import numpy as np
 
-st.set_page_config(page_title="Prediccion de Enfermedades Crónicas", page_icon=":smile:", layout="wide", initial_sidebar_state="auto")
+st.set_page_config(page_title="Prediccion de Enfermedades Crónicas", page_icon=":smile:", layout="wide", initial_sidebar_state="expanded")
 
 # Cargar los modelos entrenados
 model_diabetes = joblib.load('Modulo_2/Nutriologos/Modelos/diabetes_model.pkl')
